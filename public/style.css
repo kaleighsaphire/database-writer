@@ -1,0 +1,27 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+}
+
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    margin:2px 0 20px 10px;
+}
+
+input{
+    display: block;
+    font-size: 1em;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    margin:2px 0 20px 10px;
+}
+.row {
+    display: flex;
+    gap: 150px
+  }
+.column {
+    padding-left: 5%;
+}

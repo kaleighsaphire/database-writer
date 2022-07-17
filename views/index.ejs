@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Trek API Database Build</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <section class="row">
+        <section class="column">
+            <h2>Input API Data Here</h2>
+            <form action="/api" method="POST">
+                <input type="text" placeholder="name" name="name">
+                <input type="text" placeholder="speciesName" name="speciesName">
+                <textarea name="features" placeholder="features" cols="30" rows="5"></textarea>
+                <input type="text" placeholder="homeWorld" name="homeWorld">
+                <input type="text" placeholder="image" name="image">
+                <textarea name="interestingFact" placeholder="interestingFact" cols="30" rows="5"></textarea>
+                <input type="text" placeholder="notableExamples" name="notableExamples">
+                <button type="submit">SUBMIT NEW</button>
+                <button type="button" id="updateButton">UPDATE EXISTING</button>
+            </form>
+        </section>
+        <section>
+            <h2>Delete Entry</h2>
+                <input type="text" placeholder="name" name="deleteInput" id="deleteInput">
+                <button type="button" id="deleteButton">DELETE EXISTING</button>
+        </section>
+        <section class="column">
+            <h2>Current Aliens</h2>
+            <ul class="aliens">
+                <% for(let i=0; i< info.length; i++) {%>
+                    <li class="alien">
+                        <span><%= info[i] %></span>
+                    </li>
+                <% } %>
+            </ul>
+        </section>
+    </section>
+
+    <script type="text/javascript" src="/main.js"></script>
+</body>
+</html>
